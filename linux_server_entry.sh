@@ -5,7 +5,7 @@ if [ $(id -u) != "0" ]; then
     exit 1
 fi
 yum -y update
-yum install -y screen dstat wget lrzsz git vim
+yum install -y screen dstat wget lrzsz git vim tree
 wget http://pkgs.repoforge.org/axel/axel-2.4-1.el6.rf.x86_64.rpm
 rpm -ivh axel-2.4-1.el6.rf.x86_64.rpm
 axel -n 10 http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz
