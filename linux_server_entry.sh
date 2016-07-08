@@ -4,7 +4,7 @@ if [ $(id -u) != "0" ]; then
     echo "Error: You must be root to run this script."
     exit 1
 fi
-yum update
+yum -y update
 yum install -y screen dstat wget lrzsz git vim
 wget http://pkgs.repoforge.org/axel/axel-2.4-1.el6.rf.x86_64.rpm
 rpm -ivh axel-2.4-1.el6.rf.x86_64.rpm
