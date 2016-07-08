@@ -7,21 +7,21 @@ CLIENT=redis-cli
 function start_master()
 {
     cd /usr/local/redisDB/master
-    ./$DAEMON ./redis.conf
+    $DAEMON ./redis.conf
 }
 
 function start_slave()
 {
     cd /usr/local/redisDB/slave
-    ./$DAEMON ./redis.conf
+    $DAEMON ./redis.conf
 }
 
 function start_sentinel()
 {
     cd /usr/local/redisDB/sentinel
-    ./$SENTINEL ./sentinel26371/sentinel26371.conf
-    ./$SENTINEL ./sentinel26372/sentinel26372.conf
-    ./$SENTINEL ./sentinel26373/sentinel26373.conf
+    ./$SENTINEL ./sentinel26371/sentinel.conf
+    ./$SENTINEL ./sentinel26372/sentinel.conf
+    ./$SENTINEL ./sentinel26373/sentinel.conf
 }
 
 function start()
@@ -64,3 +64,4 @@ case "$1" in
 		;;
 esac
 exit 0
+
